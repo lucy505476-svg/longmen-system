@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars
+.DS_Store
+# 真實個資（薪資、打卡），不可推上 GitHub
+data/

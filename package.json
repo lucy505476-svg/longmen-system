@@ -1,0 +1,22 @@
+{
+  "name": "longmen-system",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "db:migrate": "wrangler d1 migrations apply longmen --local",
+    "db:seed": "wrangler d1 execute longmen --local --file=seed/seed.sql",
+    "db:reset": "rm -rf .wrangler/state/v3/d1 && npm run db:migrate && npm run db:seed",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "4.13.18"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20261110.1",
+    "typescript": "7.0.2",
+    "wrangler": "4.160.0"
+  }
+}

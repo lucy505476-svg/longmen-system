@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "longmen-dev",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "export PATH=\"$HOME/.local/node/bin:$PATH\" && npx wrangler dev --port 8787"],
+      "port": 8787
+    }
+  ]
+}
